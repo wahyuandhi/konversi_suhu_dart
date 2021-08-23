@@ -6,9 +6,9 @@ void main() {
   var celcius = (fahrenheit - 32) * 5 / 9;
   var kelvin = (fahrenheit - 32) * 5 / 9 + 273.15;
   var reamur = (fahrenheit - 32) * 4 / 9;
-  result('fahrenheit', fahrenheit, 'celsius', celcius);
-  result('fahrenheit', fahrenheit, 'kelvin', kelvin);
-  result('fahrenheit', fahrenheit, 'reamur', reamur);
+  result(type1: 'fahrenheit', num1: fahrenheit, type2: 'celsius', num2: celcius);
+  result(type1: 'fahrenheit', num1: fahrenheit, type2: 'kelvin', num2: kelvin);
+  result(type1: 'fahrenheit', num1: fahrenheit, type2: 'reamur', num2: reamur);
 }
 
-void result(String type1, num num1, String type2, num num2) => print('$num1 derajat $type1 = $num2 derajat $type2');
+void result({required String type1, required num num1, required String type2, required num num2}) => print('$num1 derajat $type1 = $num2 derajat $type2');
